@@ -1,0 +1,189 @@
+/* إعدادات عامة لتصفير المسافات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4fbf7; /* خلفية الصفحة المائلة للخضار الخفيف */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* الهيدر والبانر الأخضر */
+header {
+    background-color: #1e7e34; /* اللون الأخضر الأساسي */
+    text-align: center;
+    color: white;
+}
+
+.header-banner {
+    padding: 20px 0;
+    border-bottom: 2px solid #155d25;
+}
+
+.header-banner h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* قائمة التنقل */
+nav {
+    background-color: #218838;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* الحاوية الرئيسية (تقسيم الشاشة لعمودين) */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    flex: 1; /* لتمديد المحتوى ودفع الفوتر للأسفل */
+}
+
+/* القائمة الجانبية اليسرى (أو اليمنى حسب التصميم) */
+.sidebar {
+    flex: 1;
+    background-color: #e2f3e7; /* الخلفية الخضراء الفاتحة جداً */
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 30px 20px;
+    height: fit-content;
+}
+
+.sidebar h2 {
+    color: #155d25;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* الجزء الرئيسي المحتوي على الترحيب والفورم */
+.main-content {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.welcome-section h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* كرت الفورم الأبيض الداخلي */
+.form-card {
+    background-color: #f0f9f4;
+    border: 1px solid #d4edda;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-card h3 {
+    color: #155d25;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* الحقول والمدخلات */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #218838;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(33, 136, 56, 0.3);
+}
+
+/* زر الإرسال الأخضر */
+button {
+    width: 100%;
+    background-color: #218838;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #155d25;
+}
+
+/* الفوتر */
+footer {
+    background-color: #006400; /* أخضر غامق جداً */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* التجاوب مع الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        flex: none;
+        width: 100%;
+    }
+}
